@@ -49,6 +49,7 @@ const TaskList = () => {
                 name: ''
             })
             toast.success('Task was created successfully!')
+            getTasks()
         })
         .catch((error) => {
             toast.error(error.message)
@@ -95,6 +96,7 @@ const TaskList = () => {
         await axios.delete(`/api/tasks/${id}`)
         .then(() => {
             toast.success('Task deleted successfully')
+            getTasks()
         } )
         .catch((error) => {
             toast.error(error.message)
@@ -136,6 +138,7 @@ const TaskList = () => {
             setIsEditting(false)
             setTaskId('')
             setTaskName('')
+            getTasks()
         })
         .catch((error) => {
             toast.error(error.message)
@@ -167,7 +170,7 @@ const TaskList = () => {
     
         
       
-    }, [createTask, deleteTask])
+    }, [])
     
 
 
