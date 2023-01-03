@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { toast } from "react-toastify"
+import Loader from "./preLoader"
 import Task from "./Task"
 import TaskForm from "./TaskForm"
 
@@ -193,7 +194,12 @@ const TaskList = () => {
         
         {
             
-            tasks == []? null: tasks.map((task, index) => (
+            tasks.length == 0? 
+            <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', height: '300px'}}>
+                
+                <Loader/>
+            </div>
+            : tasks.map((task, index) => (
                 <Task key={task._id} index={index} task={task} deleteFunction={() => deleteTask(task._id)} getSingleTask={() => getSingleTask(task, index)} setToComplete={() => setToComplete(task)} />
             ))
         }
