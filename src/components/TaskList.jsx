@@ -189,7 +189,7 @@ const TaskList = () => {
         
         {
             
-            tasks.map((task, index) => (
+            tasks?.map((task, index) => (
                 <Task key={task._id} index={index} task={task} deleteFunction={() => deleteTask(task._id)} getSingleTask={() => getSingleTask(task, index)} setToComplete={() => setToComplete(task)} />
             ))
         }
