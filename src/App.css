@@ -443,6 +443,7 @@ a:hover {
   justify-content: start;
   align-items: center;
   padding: 0 10px;
+  padding-bottom: 50px;
 }
 .logo-container{
   justify-content: flex-start;
