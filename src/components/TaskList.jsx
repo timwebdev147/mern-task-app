@@ -158,6 +158,7 @@ const TaskList = () => {
                 newFormData
             )
             toast.success('task has been completed!')
+            getTasks()
         } catch (error) {
             toast.error(error.message)
             console.log(error);
