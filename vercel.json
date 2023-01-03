@@ -5,10 +5,6 @@
       {
         "source": "/api/:path*",
         "destination": "https://mern-task-app-backend.vercel.app/:path*"
-      },
-      {
-        "source": "/api/:path*/",
-        "destination": "https://mern-task-app-backend.vercel.app/:path*/"
       }
     ]
   }
